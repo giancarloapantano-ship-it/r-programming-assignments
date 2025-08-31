@@ -1,2 +1,4 @@
 # r-programming-assignments
-Github repo, used for R Programming Assignments pertaining to LIS 4370
+Giancarlo Pantano
+LIS 4370
+Repository pertaining to R Programming Assignments
