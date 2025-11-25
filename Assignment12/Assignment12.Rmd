@@ -1,0 +1,36 @@
+---
+title: "My R Markdown Primer"
+author: "Giancarlo Pantano"
+date: "2025-11-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+```
+
+# Introduction
+R markdowns are a framework in which you can combine two featuresd. Text and executable code chunks. Through the combination of these features you can create documents that are replicable, easy to follow and allow for a more clear way to present finding and statistics through a presentation of R code. In addition you can knit R markdowns which allows you to share them in methods other than .R files. You can share them through .PDF, .HTML, and Word. 
+
+**Narrative Paragraph**
+Being able to use code and text within the same document seamlessly as R markdowns allow provides many great benefits.This is including being able to explain the next parts of the document clearly while still maintaining a clean and workable file.  
+
+**LaTeX Math Expression**
+$$a + a = 2a$$
+
+
+**Loading a library + datase**
+```{r setup_data, message=FALSE, warning=FALSE}
+install.packages("ggplot2")
+library(ggplot2)
+
+
+data("iris")
+```
+
+**Generate a plot**
+```{r simple_plot}
+ggplot(iris, aes(x = Sepal.Length)) +
+  geom_histogram(bins = 15,)
+```
